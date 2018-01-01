@@ -1,0 +1,35 @@
+Clé de l'API (v3 auth)
+
+68419a42db6203305b6e65b5a77bf747
+Jeton d'accès en lecture à l'API (v4 auth)
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ODQxOWE0MmRiNjIwMzMwNWI2ZTY1YjVhNzdiZjc0NyIsInN1YiI6IjVhMWVhNzhjOTI1MTQxMDMyOTA3YmUyNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GUa9buCRWAdLq0GHyf3atpuMV4gxUwqjUnFH5uTsrsI
+Exemple de requête API
+
+https://api.themoviedb.org/3/movie/550?api_key=68419a42db6203305b6e65b5a77bf747
+
+
+URL TheMovieDB
+Les films les plus populaires du moment en français.
+
+https://api.themoviedb.org/3/discover/movie?language=fr&sort_by=popularity.desc&include_adult=false&api_key=votreClé
+
+Recommendation de films pour un id de film particulier en français
+
+https://api.themoviedb.org/3/movie/idDeFilm/recommendations?api_key=votreClé&language=fr&include_adult=false
+
+Rechercher un film par son titre en français
+
+https://api.themoviedb.org/3/search/movie?api_key=votreClé&query=Un+Titre+De+film&language=fr&include_adult=false
+
+Rechercher des url de video pour un id de film en particulier (en anglais)
+
+Note : si vous appliquez un filtre avec language=fr vous aurez malheureusement moins de résultats qu'en anglais.
+
+https://api.themoviedb.org/3/movie/[id]?api_key=votreClé&append_to_response=videos&include_adult=false
+
+Définition des constantes
+
+const API_END_POINT = "https://api.themoviedb.org/3/"
+const POPULAR_MOVIES_URL = "discover/movie?language=fr&sort_by=popularity.desc&include_adult=false&append_to_response=images"
+const API_KEY = "api_key=68419a42db6203305b6e65b5a77bf747"
